@@ -1,0 +1,29 @@
+<ul class="nav nav-tabs nav-fill">
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" href="#" (click)="setRegion('england-and-wales')" routerLink = "/dashboard">England and Wales  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#" (click)="setRegion('scotland')" routerLink = "/dashboard">Scotland</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link"(click)="setRegion('northern-ireland')" href="#" routerLink = "/dashboard" >Northern Ireland</a>
+</li>
+</ul>
+
+<div  class="px-4 pt-5 my-5 text-center border-bottom">
+<h3>The next bank holiday is: </h3>
+<div class="col-lg-6 mx-auto">
+<div class="h-100 p-5 text-bg-primary rounded-3">
+<h1 class="display-4 fw-bold">{{event.date | date : 'd MMMM yyyy'}} </h1>
+<h2 class="display-4 fw">{{event.title}}</h2>
+</div>
+</div>
+</div>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+
+<div class="overflow-hidden" style="max-height: 30vh;">
+</div>
+</div>
+<app-events [region]=""></app-events>
+
+
